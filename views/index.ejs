@@ -10,8 +10,8 @@
     <h1>Welcome to gitPub</h1>
     <ul>
     <% for (let a = 0; a < drinks.length; a++ ){ %>
-        <a href="/drinks/<%= a %>"><li><%= drinks[a].name %></li></a>
-    <% } %>
+        <a href="/drinks/<%= a %>"><li><%= drinks[a].name.charAt(0).toUpperCase() + drinks[a].name.slice(1)%></li></a>
+    <% }  %>
 </ul>
 </body>
 </html>
