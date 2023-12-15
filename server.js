@@ -13,4 +13,8 @@ app.get('/drinks', (req,res) => {
     res.render("index.ejs", {drinks})
 })
 
+app.get('drinks/:id', (req,res) => {
+    const id = req.params.id
+    res.send(id)
+})
 app.listen(3000, () => {console.log("Welcome to the Gitpub App!")})
