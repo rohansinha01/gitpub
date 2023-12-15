@@ -15,6 +15,7 @@ app.get('/drinks', (req,res) => {
 
 app.get('drinks/:id', (req,res) => {
     const id = req.params.id
-    res.send(id)
+    const drink = drinks[id]
+    res.send("show.ejs", {drink})
 })
 app.listen(3000, () => {console.log("Welcome to the Gitpub App!")})
