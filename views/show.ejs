@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gitPub</title>
-<%- include('./cssjs.ejs')  %>
+    <style type="text/css">
+        body {
+          color: blanchedalmond;
+          background-color: steelblue;
+          font-family: 'Courier New', Courier, monospace;
+        }
+      </style>
+      
 </head>
 <body>
 <h1>At foo bar</h1>
 <a href="/drinks">Back to Index</a>
 
-<h2><%= drink.name %></h2>
+<h2><%= drink.name.charAt(0).toUpperCase() + drink.name.slice(1)%></h2>
 <img src="<%= drink.image%>.png">
 <h3>$<%= drink.price %></h3>
 
