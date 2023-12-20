@@ -6,7 +6,8 @@ const app = express()
 app.use(express.static("public"))
 
 app.get('/', (req,res) => {
-    res.send('Welcome to the Gitpub App!')
+    res.send(`<h1><a href="/drinks">'Welcome to the Gitpub App!'</a></h1>`)
+    
 })
 
 app.get("/drinks", (req,res) => {
